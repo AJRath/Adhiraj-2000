@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhiraj Rathore - Marketing Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 2px solid #00c896;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #00c896;
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #00c896, #0077b6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #00c896;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background: #00c896;
+            color: #000;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: #00ffbf;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 200, 150, 0.3);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #00c896;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .section {
+            background: rgba(30, 30, 30, 0.7);
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .section-title {
+            color: #00c896;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .exp-title {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .exp-company {
+            color: #00c896;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .exp-duration {
+            color: #aaa;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .education-item {
+            margin-bottom: 25px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-item {
+            background: rgba(0, 200, 150, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: rgba(0, 200, 150, 0.3);
+            transform: scale(1.05);
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .interest-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .interest-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #00c896, #0077b6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .interest-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .interest-followers {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #aaa;
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+            margin-top: 30px;
+        }
+
+        .premium-banner {
+            background: linear-gradient(90deg, #00c896, #0077b6);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .premium-banner a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 15px;
+            }
+            
+            .stats {
+                gap: 15px;
+            }
+            
+            .stat-box {
+                min-width: 120px;
+                padding: 10px 15px;
+            }
+            
+            .stat-value {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-img">AR</div>
+            <h1>Adhiraj Rathore</h1>
+            <div class="tagline">Marketing | Learning Digital Strategies with a Creative Mindset</div>
+            <div class="location">
+                <span>📍 Mumbai, Maharashtra, India</span>
+            </div>
+            <div class="contact-info">
+                <button class="contact-btn">Contact Info</button>
+                <button class="contact-btn">Connect</button>
+                <button class="contact-btn">Message</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-value">81</div>
+                <div class="stat-label">Followers</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">81</div>
+                <div class="stat-label">Connections</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">21</div>
+                <div class="stat-label">Profile Views</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Search Appearances</div>
+            </div>
+        </div>
+
+        <div class="premium-banner">
+            Try Premium for ₹0 - 1-month free with 24/7 support. Cancel anytime.
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Open To</h2>
+            <p>Marketing Internship, Project Intern, Management Intern, Operations Assistant and Operations Team Member roles</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-item">
+                <div class="exp-title">Client Coordinator</div>
+                <div class="exp-company">Nextap AI · Part-time</div>
+                <div class="exp-duration">Jun 2023 - Dec 2023 · 7 mos</div>
+                <div class="exp-location">Mumbai, Maharashtra, India · Remote</div>
+                <p>Administration and Negotiation</p>
+            </div>
+            <div class="experience-item">
+                <div class="exp-title">Assistant – Business Operations</div>
+                <div class="exp-company">SEEMA TRADECOM PRIVATE LIMITED · Full-time</div>
+                <div class="exp-duration">Jul 2022 - May 2023 · 11 mos</div>
+                <div class="exp-location">Mumbai, Maharashtra, India · On-site</div>
+                <p>Management and Logistics Management</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <div class="exp-title">Master of Business Administration - MBA</div>
+                <div class="exp-company">Amity University Mumbai</div>
+                <div class="exp-duration">Marketing/Marketing Management, General</div>
+            </div>
+            <div class="education-item">
+                <div class="exp-title">Bachelor of Commerce - BCom</div>
+                <div class="exp-company">Thakur Ramnarayan college of Arts and Commerce</div>
+                <div class="exp-duration">Business, Management, Marketing, and Related Support Services</div>
+                <div class="exp-duration">Jul 2019 - Apr 2022</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Microsoft Excel</div>
+                <div class="skill-item">Operations Management</div>
+                <div class="skill-item">Digital Marketing</div>
+                <div class="skill-item">Business Strategy</div>
+                <div class="skill-item">Market Analysis</div>
+                <div class="skill-item">Creative Thinking</div>
+                <div class="skill-item">Communication</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon">📈</div>
+                    <div>
+                        <div class="interest-name">Digital Marketing</div>
+                        <div class="interest-followers">32,328 followers</div>
+                    </div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">📊</div>
+                    <div>
+                        <div class="interest-name">Google Analytics</div>
+                        <div class="interest-followers">551,563 followers</div>
+                    </div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">🎯</div>
+                    <div>
+                        <div class="interest-name">Performance Marketing</div>
+                        <div class="interest-followers">Growing community</div>
+                    </div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">🚀</div>
+                    <div>
+                        <div class="interest-name">Business Growth</div>
+                        <div class="interest-followers">Strategic development</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">People You May Know</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon">🎨</div>
+                    <div>
+                        <div class="interest-name">Anushka Dave</div>
+                        <div class="interest-followers">Graphic Designer | Digital marketing executive</div>
+                    </div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">👥</div>
+                    <div>
+                        <div class="interest-name">Rajkumar Singh</div>
+                        <div class="interest-followers">OH MY DOUGH</div>
+                    </div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">📱</div>
+                    <div>
+                        <div class="interest-name">Rudra Ajgaonkar</div>
+                        <div class="interest-followers">Freelancer Digital Marketer</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Adhiraj Rathore - Marketing Professional</p>
+            <p>www.linkedin.com/in/adhiraj-rathore-64176518b</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactButtons = document.querySelectorAll('.contact-btn');
+            
+            contactButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const action = this.textContent.toLowerCase();
+                    alert(`Action: ${action.charAt(0).toUpperCase() + action.slice(1)} initiated!`);
+                });
+            });
+            
+            // Add animation to profile image
+            const profileImg = document.querySelector('.profile-img');
+            profileImg.addEventListener('mouseover', function() {
+                this.style.transform = 'rotate(5deg) scale(1.05)';
+                this.style.transition = 'all 0.3s ease';
+            });
+            
+            profileImg.addEventListener('mouseout', function() {
+                this.style.transform = 'rotate(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
